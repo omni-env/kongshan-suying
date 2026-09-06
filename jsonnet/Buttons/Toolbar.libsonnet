@@ -361,6 +361,20 @@ local settings = import '../Settings.libsonnet';
         text: '右移',
       },
     },
+    toolbarKeyboardTemp26Button: {
+      name: 'toolbarKeyboardTemp26Button',
+      params: {
+        action: { keyboardType: 'temp26Key', },
+        systemImageName: 'keyboard',
+        text: '全键盘',
+
+        OnAlphabetic: {
+          action: 'returnPrimaryKeyboard',
+          systemImageName: 'arrow.uturn.backward',
+          text: '返回',
+        },
+      },
+    },
   },
 
   candidateStyle: {
