@@ -14,7 +14,7 @@
   # 18 : 18键布局
   # bopomofo : 注音佈局
   # sigma : 西戈拼音布局
-  keyboardLayout: '26',
+  keyboardLayout: '17',
 
 
   # 数字键盘布局选择，可选值如下：
@@ -50,9 +50,9 @@
   # x 值越小越靠左，y 值越小越靠上
   # 特殊值 null 表示不显示方案名称
   spaceButtonSchemaNameCenter:
-    { x: 0.2, y: 0.7 }, # 左下角
+    # { x: 0.2, y: 0.7 }, # 左下角
     # { x: 0.5, y: 0.5 }, # 中间
-    # null,               # 不显示
+    null,               # 不显示
 
 
   # 上下滑动提示文字显示位置
@@ -86,7 +86,7 @@
   # 26-左移  27-右移
   #
   # 将上述代号填入下面的数组即可
-  toolbarSlideButtons: [ 8, 17, 1, 2, 3, 10, 12 ],
+  toolbarSlideButtons: [ 8, 17, 12, 23, 2, 3, 10 ],
 
   # 滑动按钮区域占几个按键宽度
   toolbarSlideButtonsMaxCount: {
