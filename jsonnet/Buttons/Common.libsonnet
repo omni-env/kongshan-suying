@@ -82,7 +82,7 @@ local settings = import '../Settings.libsonnet';
       swipeDown: { action: { shortcut: '#undo' } },
       whenPreeditChanged: {
         swipeUp: {
-          action: { sendKeys: 'Control+Backspace' } // 删除一个音节
+          action: { shortcut: '#重输' }
         },
       },
     },
