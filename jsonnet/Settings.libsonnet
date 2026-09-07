@@ -133,7 +133,7 @@
 
   # Rime 方案中的快符
   quickAction:
-    { character: ';' },
-    # { character: '/' },
+    # { character: ';' },
+    { character: '/' },
 
 }

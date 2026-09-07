@@ -368,10 +368,10 @@ local settings = import '../Settings.libsonnet';
         systemImageName: 'keyboard',
         text: '全键盘',
 
-        OnAlphabetic: {
-          action: 'returnPrimaryKeyboard',
-          systemImageName: 'arrow.uturn.backward',
-          text: '返回',
+        OnTemp26: {
+          action: settings.quickAction,
+          systemImageName: 'figure.roll.runningpace',
+          text: '快符',
         },
       },
     },

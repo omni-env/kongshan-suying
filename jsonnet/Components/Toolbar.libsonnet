@@ -278,12 +278,26 @@ local newButtons(isDark=false) =
   );
 
 local newToolbar(isDark=false, isPortrait=false, keyboardName, params={}) =
+  local processButton(buttonCode) =
+    local rawBtn = keyboardParams.toolbarButton[toolbarButtonNames[buttonCode - 1]];
+    local btnParams = std.get(rawBtn, 'params', {});
+
+    // 合并当前键盘特定的配置（如 OnAlphabetic, OnPinyin）
+    local targetKey = 'On' + utils.capitalize(keyboardName);
+    local patchedBtn = std.mergePatch(rawBtn, { params: std.get(btnParams, targetKey, {}) });
+
+    // 如果开启 Temp26，继续叠加 Temp26 的配置
+    if std.get(params, 'isTemp26', false) then
+      std.mergePatch(patchedBtn, { params: std.get(patchedBtn.params, 'OnTemp26', {}) })
+    else
+      patchedBtn;
+
   local slideButtons =
   [
-    local btn = keyboardParams.toolbarButton[toolbarButtonNames[buttonCode - 1]];
-    std.mergePatch(btn, { params: std.get(btn.params, 'On'+utils.capitalize(keyboardName), {})})
+    processButton(buttonCode)
     for buttonCode in settings.toolbarSlideButtons
   ];
+
   local slideButtonsMaxCount =
     if isPortrait then settings.toolbarSlideButtonsMaxCount.portrait else settings.toolbarSlideButtonsMaxCount.landscape;
   {
