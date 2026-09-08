@@ -375,6 +375,14 @@ local settings = import '../Settings.libsonnet';
         },
       },
     },
+    toolbarZhSimpButton: {
+      name: 'toolbarZhSimpButton',
+      params: {
+        action: { shortcut: '#简繁切换' },
+        systemImageName: 'a',
+        text: '简繁',
+      },
+    },
   },
 
   candidateStyle: {

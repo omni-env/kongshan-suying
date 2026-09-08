@@ -226,6 +226,7 @@ local toolbarButtonNames = local buttons = keyboardParams.toolbarButton;
   buttons.toolbarMoveCursorLeftButton.name, // 光标左移
   buttons.toolbarMoveCursorRightButton.name, // 光标右移
   buttons.toolbarKeyboardTemp26Button.name, // 26键全键盘
+  buttons.toolbarZhSimpButton.name, // 简繁切换
 ];
 
 local needSlideToolbar(slideButtons, slideButtonsMaxCount) =
