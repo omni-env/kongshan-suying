@@ -87,7 +87,7 @@
   # 29-简繁切换
   #
   # 将上述代号填入下面的数组即可
-  toolbarSlideButtons: [ 8, 28, 23, 29, 12, 20, 21, 22, 24, 25, 17, 10 ],
+  toolbarSlideButtons: [20, 21, 23, 8, 28, 11, 12, 22, 24, 25, 29, 17, 10 ],
 
   # 滑动按钮区域占几个按键宽度
   toolbarSlideButtonsMaxCount: {
